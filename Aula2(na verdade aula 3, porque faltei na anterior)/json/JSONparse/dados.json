@@ -1,0 +1,14 @@
+{
+    "nome": "Phietro Alves",
+    "idade": 16,
+    "endereço": {
+        "rua": "Rua Principal, 123",
+        "cidade": "São Caetano do Sul"
+    },
+    "telefones": [
+        "11-1234-5678",
+        "11-9876-5432"
+    ],
+    "ativo": true,
+    "nulo": null
+}

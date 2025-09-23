@@ -1,0 +1,11 @@
+{
+    "dados": {
+        "produtos": [
+            {"nome":"Maçã", "preço": 9.99, "descrição":"Vermelha", "categoria":"Fruta"},
+            {"nome":"Alho", "preço": 1.99, "descrição":"Branco", "categoria":"Legume"},
+            {"nome":"Salgadinho", "preço": 13.99, "descrição":"Picante", "categoria":"Industrializado"},
+            {"nome":"Detergente", "preço": 7.99, "descrição":"Cheiro de rosas", "categoria":"Limpeza"},
+            {"nome":"Coca-Cola", "preço": 14.99, "descrição":"Refrigerante sabor cola", "categoria":"Bebida"}
+        ]
+    }
+}

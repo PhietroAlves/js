@@ -1,0 +1,231 @@
+{
+ "plataforma": "win32",
+ "arquitetura": "x64",
+ "cpus": [
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 777125,
+    "nice": 0,
+    "sys": 2047781,
+    "idle": 35701656,
+    "irq": 301296
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 231640,
+    "nice": 0,
+    "sys": 508781,
+    "idle": 37786000,
+    "irq": 66468
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 1183562,
+    "nice": 0,
+    "sys": 1812718,
+    "idle": 35530140,
+    "irq": 176640
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 255093,
+    "nice": 0,
+    "sys": 531968,
+    "idle": 37739359,
+    "irq": 79250
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 898484,
+    "nice": 0,
+    "sys": 1596109,
+    "idle": 36031828,
+    "irq": 191812
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 250187,
+    "nice": 0,
+    "sys": 520406,
+    "idle": 37755828,
+    "irq": 71406
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 853937,
+    "nice": 0,
+    "sys": 1458875,
+    "idle": 36213609,
+    "irq": 140515
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 186203,
+    "nice": 0,
+    "sys": 411609,
+    "idle": 37928609,
+    "irq": 54328
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 891359,
+    "nice": 0,
+    "sys": 1466828,
+    "idle": 36168234,
+    "irq": 151437
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 189468,
+    "nice": 0,
+    "sys": 408343,
+    "idle": 37928609,
+    "irq": 46812
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 984281,
+    "nice": 0,
+    "sys": 1474843,
+    "idle": 36067296,
+    "irq": 132437
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 204859,
+    "nice": 0,
+    "sys": 437546,
+    "idle": 37884015,
+    "irq": 52656
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 911562,
+    "nice": 0,
+    "sys": 1048578,
+    "idle": 36566281,
+    "irq": 90687
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 711421,
+    "nice": 0,
+    "sys": 787593,
+    "idle": 37027406,
+    "irq": 70843
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 716625,
+    "nice": 0,
+    "sys": 783140,
+    "idle": 37026656,
+    "irq": 68765
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 745640,
+    "nice": 0,
+    "sys": 776984,
+    "idle": 37003796,
+    "irq": 70609
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 1087609,
+    "nice": 0,
+    "sys": 1135250,
+    "idle": 36303562,
+    "irq": 94343
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 833406,
+    "nice": 0,
+    "sys": 846750,
+    "idle": 36846265,
+    "irq": 79656
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 833437,
+    "nice": 0,
+    "sys": 858906,
+    "idle": 36834078,
+    "irq": 84640
+   }
+  },
+  {
+   "model": "Intel(R) Core(TM) i5-14500",
+   "speed": 2611,
+   "times": {
+    "user": 875625,
+    "nice": 0,
+    "sys": 884187,
+    "idle": 36766609,
+    "irq": 90390
+   }
+  }
+ ],
+ "memoriaTotal": 16851447808,
+ "memoriaLivre": 7836762112,
+ "hostname": "ESN123D1596200",
+ "usuario": "25170905",
+ "diretorioHome": "C:\\Users\\25170905"
+}
