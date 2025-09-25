@@ -25,29 +25,52 @@ router.post('/', autenticar, (req, res) => {
 })
 
 router.put('/:id', autenticar, (req, res) => {
-    const id = req.params.id
-    const novoConteudo = req.body
+    // Entrada
+    const id = parseInt(req.params.id)
+    const tarefaAlteracao = req.body
+    // Processamento
     fs.readFile('./dados/tarefas.json', 'utf8', (err, data) => {
-        if (err) throw err
-        const arrayTarefas = JSON.parse(data)
-        const index = arrayTarefas.findIndex(tarefa => tarefa.id === id)
-        if (index === -1) return res.status(204).send('Erro ao tentar encontrar o index.')
-        arrayTarefas[index] = {id, ...novoConteudo}
-        fs.writeFile('./dados/tarefas.json', JSON.stringify(arrayTarefas, null, 2), (err) => {
-            if (err) throw err
-            res.status(200).send('Tarefa atualizada!')
-        })
+        if (err) {
+            res.status(500).send('Erro ao ler o arquivo.')
+            console.error('Erro ao ler o arquivo:\n', err)
+            return
+        }
+        try {
+            const dataJson = JSON.parse(data)
+            const index = dataJson.findIndex(tarefa => tarefa.id === id)
+
+            dataJson[index].descricao = tarefaAlteracao.descricao
+            dataJson[index].status = tarefaAlteracao.status
+
+            // Saída
+            fs.writeFile('./dados/tarefas.json', JSON.stringify(dataJson, null, 2), (err) => {
+                if (err) {
+                    res.status(500).send('Erro ao gravar o arquivo.')
+                    console.error('Erro ao gravar o arquivo:\n', err)
+                    return
+                }
+                res.status(200).send('Tarefa atualizada com sucesso!!')
+            })
+        } catch (error) {
+            res.status(500).send('Erro ao converter o arquivo.')
+            console.error('Erro ao converter o arquivo:\n', error)
+        }
     })
 })
 
 router.delete('/:id', autenticar, (req, res) => {
-    const id = req.params.id
+    // Entrada
+    const id = parseInt(req.params.id)
+
+    // Processamento
     fs.readFile('./dados/tarefas.json', 'utf8', (err, data) => {
         if (err) throw err
         const arrayTarefas = JSON.parse(data)
         const index = arrayTarefas.findIndex(tarefa => tarefa.id === id)
         if (index === -1) return res.status(404).send('Erro ao tentar encontrar o index.')
         arrayTarefas.splice(index, 1)
+    
+        // Saída
         fs.writeFile('./dados/tarefas.json', JSON.stringify(arrayTarefas, null, 2), err => {
             if (err) throw err
             res.status(200).send('Tarefa deletada!')

@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const logger = require('./middlewares/logger')
 const rotasTarefas = require('./rotas/rotasTarefas')
+const logger = require('./middlewares/logger')
 
 app.use(express.json())
 app.use(logger)
