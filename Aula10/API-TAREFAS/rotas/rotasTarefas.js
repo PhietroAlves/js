@@ -17,50 +17,46 @@ router.post('/', autenticar, (req, res) => {
         if (err) throw err
         const conteudoAtual = JSON.parse(data)
         conteudoAtual.push(novaTarefa)
-        fs.writeFile('./dados/tarefas.json', JSON.stringify(conteudoAtual, null, 2), err => {
+        fs.writeFile('./dados/tarefas.json', JSON.stringify(conteudoAtual, null, 2), (err) => {
             if (err) throw err
-            res.status(200).send('Item adicionado!')
+            res.status(200).send('Tarefa adicionada!')
         })
     })
 })
 
-router.put('/', autenticar, (req, res) => {
-
-})
-
-router.delete('/', autenticar, (req, res) => {
-    const objetoEncontrar = req.body
+router.put('/:id', autenticar, (req, res) => {
+    const id = req.params.id
+    const novoConteudo = req.body
     fs.readFile('./dados/tarefas.json', 'utf8', (err, data) => {
         if (err) throw err
-        const array = JSON.parse(data)
+        const arrayTarefas = JSON.parse(data)
+        const index = arrayTarefas.findIndex(tarefa => tarefa.id === id)
+        if (index === -1) return res.status(204).send('Erro ao tentar encontrar o index.')
+        arrayTarefas[index] = {id, ...novoConteudo}
+        fs.writeFile('./dados/tarefas.json', JSON.stringify(arrayTarefas, null, 2), (err) => {
             if (err) throw err
-            const novoArquivo = array.map(linha => {
-                if (linha != objetoEncontrar) {
-                    const [id, descricao, status] = [linha.id, linha.descricao, linha.status]
-                    return { id, descricao, status }
-                }
-                fs.writeFile('./dados/tarefas.json', JSON.stringify(novoArquivo, null, 2))
-            })
+            res.status(200).send('Tarefa atualizada!')
+        })
     })
 })
 
-router.options('/visualizar', (req, res) => {
-    res.header('Allow', 'GET, OPTIONS')
-    res.status(204).send()
+router.delete('/:id', autenticar, (req, res) => {
+    const id = req.params.id
+    fs.readFile('./dados/tarefas.json', 'utf8', (err, data) => {
+        if (err) throw err
+        const arrayTarefas = JSON.parse(data)
+        const index = arrayTarefas.findIndex(tarefa => tarefa.id === id)
+        if (index === -1) return res.status(404).send('Erro ao tentar encontrar o index.')
+        arrayTarefas.splice(index, 1)
+        fs.writeFile('./dados/tarefas.json', JSON.stringify(arrayTarefas, null, 2), err => {
+            if (err) throw err
+            res.status(200).send('Tarefa deletada!')
+        })
+    })
 })
 
-router.options('/criar', (req, res) => {
-    res.header('Allow', 'POST, OPTIONS')
-    res.status(204).send()
-})
-
-router.options('/atualizar', (req, res) => {
-    res.header('Allow', 'POST, OPTIONS')
-    res.status(204).send()
-})
-
-router.options('/deletar', (req, res) => {
-    res.header('Allow', 'POST, OPTIONS')
+router.options('/', (req, res) => {
+    res.header('Allow', 'GET, POST, PUT, DELETE, OPTIONS')
     res.status(204).send()
 })
 
