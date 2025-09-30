@@ -3,5 +3,10 @@
     "id": 1,
     "descricao": "Estudar Node.js e Promises",
     "status": "concluída"
+  },
+  {
+    "id": 2,
+    "descricao": "Alterando com PUT",
+    "status": "Pendente"
   }
 ]
